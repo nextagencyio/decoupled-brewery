@@ -1,0 +1,159 @@
+{
+  "data": {
+    "nodeEvents": {
+      "__typename": "NodeEventConnection",
+      "nodes": [
+        {
+          "__typename": "NodeEvent",
+          "id": "event-ipa-day",
+          "title": "National IPA Day Celebration",
+          "path": "/events/national-ipa-day",
+          "body": {
+            "processed": "<p>Celebrate National IPA Day with us! We're tapping five exclusive IPA variants, including two that have never been available outside the brewery. Enjoy live music from local band The Hop Yard, food trucks, and a special IPA flight sampler.</p><h2>Featured Releases</h2><ul><li>Iron Rail IPA (flagship)</li><li>Double Dry-Hopped Iron Rail</li><li>Hazy Juicy IPA (new release)</li><li>Barrel-Aged Imperial IPA</li><li>Session IPA with Mango</li></ul>",
+            "summary": "Celebrate National IPA Day with us! We're tapping five exclusive IPA variants, including two that have never been available outside the brewery. Enjoy live music from local band The Hop Yard, food tru"
+          },
+          "eventDate": {
+            "timestamp": 1786035600
+          },
+          "endDate": {
+            "timestamp": 1786071600
+          },
+          "venueLocation": "Taproom & Beer Garden",
+          "eventCategory": [
+            {
+              "id": "release-party",
+              "name": "release-party"
+            }
+          ],
+          "ticketPrice": "Free admission, flights $15",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
+            "alt": "Craft beer tasting flight on wooden paddle",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeEvent",
+          "id": "event-trivia",
+          "title": "Taproom Trivia Night",
+          "path": "/events/weekly-trivia",
+          "body": {
+            "processed": "<p>Think you know your stuff? Put your team to the test every Wednesday at our weekly Trivia Night. Five rounds of questions spanning pop culture, sports, science, history, and of course, beer. Top three teams win gift cards to the taproom.</p><p>Teams of up to 6 players. Arrive early to snag the best seats. Happy hour prices on all drafts during trivia!</p>",
+            "summary": "Think you know your stuff? Put your team to the test every Wednesday at our weekly Trivia Night. Five rounds of questions spanning pop culture, sports, science, history, and of course, beer. Top three"
+          },
+          "eventDate": {
+            "timestamp": 1775692800
+          },
+          "endDate": {
+            "timestamp": 1775701800
+          },
+          "venueLocation": "Main Taproom",
+          "eventCategory": [
+            {
+              "id": "trivia-night",
+              "name": "trivia-night"
+            }
+          ],
+          "ticketPrice": "Free entry",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1546622891-02c72c1537b6?w=800&q=80",
+            "alt": "Friends enjoying trivia night at a brewery taproom",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1546622891-02c72c1537b6?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1546622891-02c72c1537b6?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1546622891-02c72c1537b6?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeEvent",
+          "id": "event-beer-dinner",
+          "title": "Brewmaster's Dinner: Spring Edition",
+          "path": "/events/brewmasters-dinner",
+          "body": {
+            "processed": "<p>Our head brewer and executive chef collaborate on an intimate five-course dinner where each dish is designed to complement a specially selected beer. This seasonal dinner highlights spring ingredients from local farms paired with exclusive small-batch brews.</p><h2>Menu Preview</h2><ul><li>Course 1: Spring pea veloute with Session Lager</li><li>Course 2: Pan-seared trout with Summer Haze Hefeweizen</li><li>Course 3: Braised lamb shank with Midnight Stout</li><li>Course 4: Local cheese board with Belgian Dubbel</li><li>Course 5: Lavender cr&egrave;me br&ucirc;l&eacute;e with Honey Wheat</li></ul>",
+            "summary": "Our head brewer and executive chef collaborate on an intimate five-course dinner where each dish is designed to complement a specially selected beer. This seasonal dinner highlights spring ingredients"
+          },
+          "eventDate": {
+            "timestamp": 1778974200
+          },
+          "endDate": {
+            "timestamp": 1778985000
+          },
+          "venueLocation": "Private Dining Room",
+          "eventCategory": [
+            {
+              "id": "food-pairing",
+              "name": "food-pairing"
+            }
+          ],
+          "ticketPrice": "$85 per person",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80",
+            "alt": "Elegant beer and food pairing dinner setup",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

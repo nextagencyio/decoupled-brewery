@@ -1,0 +1,59 @@
+{
+  "data": {
+    "nodeHomepages": {
+      "__typename": "NodeHomepageConnection",
+      "nodes": [
+        {
+          "__typename": "NodeHomepage",
+          "id": "homepage",
+          "title": "Welcome to Iron Rail Brewing Co.",
+          "path": "/homepage",
+          "heroTitle": "Craft Beer, Brewed with Purpose",
+          "heroSubtitle": "Small Batch. Big Flavor. Local Heart.",
+          "heroDescription": {
+            "processed": "<p>At Iron Rail Brewing Co., we believe great beer starts with quality ingredients, time-honored techniques, and a relentless passion for flavor. Visit our taproom, take a brewery tour, or grab a growler to go. There's always something new on tap.</p>",
+            "summary": "At Iron Rail Brewing Co., we believe great beer starts with quality ingredients, time-honored techniques, and a relentless passion for flavor. Visit our taproom, take a brewery tour, or grab a growler"
+          },
+          "statsItems": [
+            {
+              "__typename": "ParagraphStatItem",
+              "id": "stat-brews",
+              "title": "",
+              "number": "24",
+              "label": "Beers on Tap"
+            },
+            {
+              "__typename": "ParagraphStatItem",
+              "id": "stat-barrels",
+              "title": "",
+              "number": "5,000+",
+              "label": "Barrels Brewed Annually"
+            },
+            {
+              "__typename": "ParagraphStatItem",
+              "id": "stat-years",
+              "title": "",
+              "number": "12",
+              "label": "Years of Craft Brewing"
+            },
+            {
+              "__typename": "ParagraphStatItem",
+              "id": "stat-awards",
+              "title": "",
+              "number": "35+",
+              "label": "Awards Won"
+            }
+          ],
+          "featuredBeveragesTitle": "What's on Tap",
+          "ctaTitle": "Visit the Taproom",
+          "ctaDescription": {
+            "processed": "<p>Our taproom is open seven days a week, featuring rotating taps, pub fare from our scratch kitchen, and a welcoming atmosphere for beer lovers of all kinds. Bring your friends, your family, and your dog.</p>",
+            "summary": "Our taproom is open seven days a week, featuring rotating taps, pub fare from our scratch kitchen, and a welcoming atmosphere for beer lovers of all kinds. Bring your friends, your family, and your do"
+          },
+          "ctaPrimary": "View Hours & Location",
+          "ctaSecondary": "Book a Tour"
+        }
+      ]
+    }
+  }
+}

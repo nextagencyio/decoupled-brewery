@@ -1,0 +1,390 @@
+{
+  "model": [
+    {
+      "bundle": "homepage",
+      "label": "Homepage",
+      "description": "Brewery landing page",
+      "fields": [
+        {
+          "id": "hero_title",
+          "label": "Hero Title",
+          "type": "string"
+        },
+        {
+          "id": "hero_subtitle",
+          "label": "Hero Subtitle",
+          "type": "string"
+        },
+        {
+          "id": "hero_description",
+          "label": "Hero Description",
+          "type": "text"
+        },
+        {
+          "id": "features_items",
+          "label": "Feature Items",
+          "type": "paragraph(feature_item)[]"
+        },
+        {
+          "id": "cta_title",
+          "label": "CTA Title",
+          "type": "string"
+        },
+        {
+          "id": "cta_description",
+          "label": "CTA Description",
+          "type": "text"
+        },
+        {
+          "id": "cta_primary",
+          "label": "Primary CTA",
+          "type": "string"
+        },
+        {
+          "id": "cta_secondary",
+          "label": "Secondary CTA",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "bundle": "beverage",
+      "label": "Beverage",
+      "description": "A beer or drink available at the brewery",
+      "body": true,
+      "fields": [
+        {
+          "id": "style",
+          "label": "Style",
+          "type": "string"
+        },
+        {
+          "id": "abv",
+          "label": "ABV",
+          "type": "string"
+        },
+        {
+          "id": "price",
+          "label": "Price",
+          "type": "string"
+        },
+        {
+          "id": "seasonal",
+          "label": "Seasonal",
+          "type": "bool"
+        },
+        {
+          "id": "image",
+          "label": "Image",
+          "type": "image"
+        }
+      ]
+    },
+    {
+      "bundle": "event",
+      "label": "Event",
+      "description": "Brewery events",
+      "body": true,
+      "fields": [
+        {
+          "id": "event_date",
+          "label": "Event Date",
+          "type": "datetime"
+        },
+        {
+          "id": "location",
+          "label": "Location",
+          "type": "string"
+        },
+        {
+          "id": "image",
+          "label": "Image",
+          "type": "image"
+        }
+      ]
+    },
+    {
+      "bundle": "page",
+      "label": "Basic Page",
+      "description": "Static pages",
+      "body": true,
+      "fields": []
+    },
+    {
+      "entity": "paragraph",
+      "bundle": "feature_item",
+      "label": "Feature Item",
+      "description": "Feature highlight",
+      "fields": [
+        {
+          "id": "icon",
+          "label": "Icon",
+          "type": "string"
+        },
+        {
+          "id": "title",
+          "label": "Title",
+          "type": "string!"
+        },
+        {
+          "id": "description",
+          "label": "Description",
+          "type": "text"
+        }
+      ]
+    }
+  ],
+  "content": [
+    {
+      "id": "f1",
+      "type": "paragraph.feature_item",
+      "values": {
+        "icon": "Beer",
+        "title": "Small-Batch Craft",
+        "description": "Every brew is crafted in small batches using traditional methods and the finest ingredients."
+      }
+    },
+    {
+      "id": "f2",
+      "type": "paragraph.feature_item",
+      "values": {
+        "icon": "Hop",
+        "title": "Locally Sourced Hops",
+        "description": "We source our hops from regional farms, supporting local agriculture and ensuring peak freshness."
+      }
+    },
+    {
+      "id": "f3",
+      "type": "paragraph.feature_item",
+      "values": {
+        "icon": "Users",
+        "title": "Community Focused",
+        "description": "More than a brewery, we're a gathering place. Join us for events, trivia nights, and live music."
+      }
+    },
+    {
+      "id": "f4",
+      "type": "paragraph.feature_item",
+      "values": {
+        "icon": "FlaskConical",
+        "title": "Experimental Brews",
+        "description": "Our pilot system lets us experiment with bold flavors and limited-edition seasonal releases."
+      }
+    },
+    {
+      "id": "f5",
+      "type": "paragraph.feature_item",
+      "values": {
+        "icon": "Wheat",
+        "title": "Quality Ingredients",
+        "description": "Premium malts, pure water, and carefully selected yeast strains make every pint exceptional."
+      }
+    },
+    {
+      "id": "f6",
+      "type": "paragraph.feature_item",
+      "values": {
+        "icon": "Award",
+        "title": "Award Winning",
+        "description": "Multiple regional and national awards recognize our commitment to brewing excellence."
+      }
+    },
+    {
+      "id": "homepage",
+      "type": "node.homepage",
+      "path": "/homepage",
+      "values": {
+        "title": "Ironwood Brewing Co. Homepage",
+        "hero_title": "Craft Beer, Brewed with Purpose",
+        "hero_subtitle": "Small Batch. Big Flavor.",
+        "hero_description": "<p>Welcome to Ironwood Brewing Co., where passion meets craft. Our taproom features rotating taps of house-brewed ales, lagers, and seasonal specials made with locally sourced ingredients.</p>",
+        "features_items": [
+          "@f1",
+          "@f2",
+          "@f3",
+          "@f4",
+          "@f5",
+          "@f6"
+        ],
+        "cta_title": "Visit Our Taproom",
+        "cta_description": "<p>Open seven days a week with 16 rotating taps, a full food menu, and a dog-friendly patio. Come taste what craft brewing is all about.</p>",
+        "cta_primary": "Visit Taproom",
+        "cta_secondary": "View Beverages"
+      }
+    },
+    {
+      "id": "bev1",
+      "type": "node.beverage",
+      "path": "/beverages/ironwood-ipa",
+      "values": {
+        "title": "Ironwood IPA",
+        "body": "<p>Our flagship India Pale Ale bursting with citrus and pine hop aromas. Balanced bitterness with a clean, dry finish.</p>",
+        "style": "IPA",
+        "abv": "6.8%",
+        "price": "$8",
+        "seasonal": false,
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=800&q=80",
+          "alt": "IPA beer glass",
+          "title": "Ironwood IPA"
+        }
+      }
+    },
+    {
+      "id": "bev2",
+      "type": "node.beverage",
+      "path": "/beverages/amber-ale",
+      "values": {
+        "title": "Copper Ridge Amber",
+        "body": "<p>A malt-forward amber ale with notes of caramel and toasted bread. Smooth and approachable for any palate.</p>",
+        "style": "Amber Ale",
+        "abv": "5.4%",
+        "price": "$7",
+        "seasonal": false,
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1608270586620-248524c67de9?w=800&q=80",
+          "alt": "Amber ale in glass",
+          "title": "Copper Ridge Amber"
+        }
+      }
+    },
+    {
+      "id": "bev3",
+      "type": "node.beverage",
+      "path": "/beverages/porter",
+      "values": {
+        "title": "Midnight Porter",
+        "body": "<p>Rich and roasty porter with chocolate and coffee undertones. Full-bodied yet surprisingly smooth.</p>",
+        "style": "Porter",
+        "abv": "5.8%",
+        "price": "$8",
+        "seasonal": false,
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1532634922-8fe0b757fb13?w=800&q=80",
+          "alt": "Dark porter beer",
+          "title": "Midnight Porter"
+        }
+      }
+    },
+    {
+      "id": "bev4",
+      "type": "node.beverage",
+      "path": "/beverages/wheat-ale",
+      "values": {
+        "title": "Summer Wheat",
+        "body": "<p>Light and refreshing wheat ale with hints of citrus and coriander. Perfect for warm weather sipping.</p>",
+        "style": "Wheat Ale",
+        "abv": "4.5%",
+        "price": "$7",
+        "seasonal": true,
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1571613316887-6f8d5cbf7ef7?w=800&q=80",
+          "alt": "Wheat beer in glass",
+          "title": "Summer Wheat"
+        }
+      }
+    },
+    {
+      "id": "bev5",
+      "type": "node.beverage",
+      "path": "/beverages/stout",
+      "values": {
+        "title": "Blacksmith Stout",
+        "body": "<p>Imperial stout aged on vanilla beans and cacao nibs. Decadent, complex, and perfect for sipping slowly.</p>",
+        "style": "Imperial Stout",
+        "abv": "9.2%",
+        "price": "$10",
+        "seasonal": true,
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80",
+          "alt": "Stout beer glass",
+          "title": "Blacksmith Stout"
+        }
+      }
+    },
+    {
+      "id": "bev6",
+      "type": "node.beverage",
+      "path": "/beverages/pilsner",
+      "values": {
+        "title": "Trailhead Pilsner",
+        "body": "<p>Crisp Czech-style pilsner with noble hop character and a bright, clean finish. Our most sessionable brew.</p>",
+        "style": "Pilsner",
+        "abv": "4.8%",
+        "price": "$7",
+        "seasonal": false,
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1600788886242-5c96aabe3757?w=800&q=80",
+          "alt": "Pilsner beer glass",
+          "title": "Trailhead Pilsner"
+        }
+      }
+    },
+    {
+      "id": "ev1",
+      "type": "node.event",
+      "path": "/events/tap-takeover",
+      "values": {
+        "title": "Spring Tap Takeover",
+        "body": "<p>Celebrate spring with 8 brand-new seasonal releases. Live music, food trucks, and brewery tours all day.</p>",
+        "event_date": "2026-04-12T12:00:00",
+        "location": "Main Taproom & Patio",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1559526324-593bc073d938?w=800&q=80",
+          "alt": "Brewery tap handles",
+          "title": "Spring Tap Takeover"
+        }
+      }
+    },
+    {
+      "id": "ev2",
+      "type": "node.event",
+      "path": "/events/trivia-night",
+      "values": {
+        "title": "Weekly Trivia Night",
+        "body": "<p>Test your knowledge every Wednesday! Teams of up to 6, prizes for top 3 finishers. Half-price pints for all players.</p>",
+        "event_date": "2026-04-09T19:00:00",
+        "location": "Taproom",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=800&q=80",
+          "alt": "Trivia night at bar",
+          "title": "Trivia Night"
+        }
+      }
+    },
+    {
+      "id": "ev3",
+      "type": "node.event",
+      "path": "/events/homebrew-competition",
+      "values": {
+        "title": "Homebrew Competition",
+        "body": "<p>Amateur brewers compete for bragging rights and a chance to have their recipe brewed on our pilot system.</p>",
+        "event_date": "2026-05-17T10:00:00",
+        "location": "Brewery Floor",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=800&q=80",
+          "alt": "Homebrew setup",
+          "title": "Homebrew Competition"
+        }
+      }
+    },
+    {
+      "id": "about",
+      "type": "node.page",
+      "path": "/about",
+      "values": {
+        "title": "About Ironwood Brewing Co.",
+        "body": "<p>Founded in 2019 by lifelong friends and homebrewing enthusiasts, Ironwood Brewing Co. started as a dream in a garage and grew into a beloved community taproom.</p><h2>Our Philosophy</h2><p>We believe great beer starts with great ingredients and a deep respect for the craft. Every batch is brewed with care, creativity, and a commitment to quality.</p>"
+      }
+    },
+    {
+      "id": "contact",
+      "type": "node.page",
+      "path": "/contact",
+      "values": {
+        "title": "Visit Us",
+        "body": "<p>Come hang out at our taproom! We're open seven days a week.</p><h2>Hours</h2><p><strong>Mon-Thu:</strong> 3:00 PM - 10:00 PM<br/><strong>Fri:</strong> 12:00 PM - 11:00 PM<br/><strong>Sat:</strong> 11:00 AM - 11:00 PM<br/><strong>Sun:</strong> 11:00 AM - 8:00 PM</p><h2>Location</h2><p>215 Industrial Way, Brewery District<br/>Phone: (555) 987-6543</p>"
+      }
+    }
+  ]
+}

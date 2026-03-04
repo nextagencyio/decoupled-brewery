@@ -1,0 +1,221 @@
+{
+  "data": {
+    "nodeBeverages": {
+      "__typename": "NodeBeverageConnection",
+      "nodes": [
+        {
+          "__typename": "NodeBeverage",
+          "id": "beer-flagship-ipa",
+          "title": "Iron Rail IPA",
+          "path": "/beers/iron-rail-ipa",
+          "body": {
+            "processed": "<p>Our flagship IPA is a bold, hop-forward brew that put us on the map. Brewed with a blend of Citra, Mosaic, and Simcoe hops, it delivers waves of tropical fruit and pine with a clean, balanced finish. This is the beer that started it all — and it's still the one our regulars come back for.</p><h2>Brewing Notes</h2><p>We dry-hop this IPA for seven days using our proprietary blending technique, which produces an exceptionally aromatic beer with minimal bitterness on the palate.</p>",
+            "summary": "Our flagship IPA is a bold, hop-forward brew that put us on the map. Brewed with a blend of Citra, Mosaic, and Simcoe hops, it delivers waves of tropical fruit and pine with a clean, balanced finish. "
+          },
+          "beverageType": [
+            {
+              "id": "ipa",
+              "name": "ipa"
+            }
+          ],
+          "style": "West Coast IPA",
+          "abv": "6.8%",
+          "ibu": "65",
+          "tastingNotes": [
+            "Tropical fruit",
+            "Pine",
+            "Citrus zest",
+            "Clean finish"
+          ],
+          "availability": "Year-round",
+          "pricePint": "$7",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=800&q=80",
+            "alt": "Glass of golden IPA beer with hops in background",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeBeverage",
+          "id": "beer-midnight-stout",
+          "title": "Midnight Stout",
+          "path": "/beers/midnight-stout",
+          "body": {
+            "processed": "<p>Rich, velvety, and deeply satisfying, our Midnight Stout is brewed with roasted barley, chocolate malt, and a hint of vanilla. This full-bodied stout pours an opaque black with a creamy tan head and delivers complex layers of dark chocolate, espresso, and caramel.</p><h2>Brewing Notes</h2><p>We cold-condition this stout for three weeks, which smooths out the roasted edges and creates an exceptionally drinkable dark beer. Perfect for cooler evenings or paired with a rich dessert.</p>",
+            "summary": "Rich, velvety, and deeply satisfying, our Midnight Stout is brewed with roasted barley, chocolate malt, and a hint of vanilla. This full-bodied stout pours an opaque black with a creamy tan head and d"
+          },
+          "beverageType": [
+            {
+              "id": "stout",
+              "name": "stout"
+            }
+          ],
+          "style": "American Stout",
+          "abv": "7.2%",
+          "ibu": "40",
+          "tastingNotes": [
+            "Dark chocolate",
+            "Espresso",
+            "Vanilla",
+            "Caramel"
+          ],
+          "availability": "Year-round",
+          "pricePint": "$7",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1608270586620-248524c67de9?w=800&q=80",
+            "alt": "Dark stout beer in a tulip glass",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1608270586620-248524c67de9?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1608270586620-248524c67de9?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1608270586620-248524c67de9?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeBeverage",
+          "id": "beer-golden-lager",
+          "title": "Golden Rail Lager",
+          "path": "/beers/golden-lager",
+          "body": {
+            "processed": "<p>Crisp, clean, and refreshing — our Golden Rail Lager is a classic American lager elevated with premium ingredients. Brewed with Pilsner malt and noble hops, then lagered for six weeks at near-freezing temperatures for a smooth, bright character that's perfect any time of day.</p><h2>Brewing Notes</h2><p>This lager undergoes a traditional decoction mash and extended cold conditioning, producing the kind of clean, malty character that made lager the world's most popular beer style.</p>",
+            "summary": "Crisp, clean, and refreshing — our Golden Rail Lager is a classic American lager elevated with premium ingredients. Brewed with Pilsner malt and noble hops, then lagered for six weeks at near-freezing"
+          },
+          "beverageType": [
+            {
+              "id": "lager",
+              "name": "lager"
+            }
+          ],
+          "style": "American Lager",
+          "abv": "4.5%",
+          "ibu": "18",
+          "tastingNotes": [
+            "Crisp malt",
+            "Light floral hops",
+            "Bread crust",
+            "Clean finish"
+          ],
+          "availability": "Year-round",
+          "pricePint": "$6",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=800&q=80",
+            "alt": "Refreshing golden lager in a pilsner glass",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeBeverage",
+          "id": "beer-hefeweizen",
+          "title": "Summer Haze Hefeweizen",
+          "path": "/beers/summer-haze",
+          "body": {
+            "processed": "<p>A traditional Bavarian-style wheat beer, our Summer Haze pours a hazy golden-orange with a thick, pillowy white head. Classic banana and clove character from our imported German yeast strain makes this the ultimate warm-weather sipper.</p><h2>Brewing Notes</h2><p>Brewed with 60% malted wheat and fermented at a carefully controlled temperature to bring out the signature fruity esters and spicy phenols of the Weihenstephan yeast strain.</p>",
+            "summary": "A traditional Bavarian-style wheat beer, our Summer Haze pours a hazy golden-orange with a thick, pillowy white head. Classic banana and clove character from our imported German yeast strain makes thi"
+          },
+          "beverageType": [
+            {
+              "id": "wheat",
+              "name": "wheat"
+            }
+          ],
+          "style": "Hefeweizen",
+          "abv": "5.1%",
+          "ibu": "12",
+          "tastingNotes": [
+            "Banana",
+            "Clove",
+            "Wheat bread",
+            "Light citrus"
+          ],
+          "availability": "Seasonal (April - September)",
+          "pricePint": "$7",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1600788886242-5c96aabe3757?w=800&q=80",
+            "alt": "Hazy wheat beer in a traditional weizen glass",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1600788886242-5c96aabe3757?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1600788886242-5c96aabe3757?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1600788886242-5c96aabe3757?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

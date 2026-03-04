@@ -1,0 +1,269 @@
+{
+  "model": [
+    {
+      "bundle": "homepage",
+      "label": "Homepage",
+      "description": "Brewery homepage with hero, stats, featured beverages, and CTA",
+      "fields": [
+        { "id": "hero_title", "label": "Hero Title", "type": "string" },
+        { "id": "hero_subtitle", "label": "Hero Subtitle", "type": "string" },
+        { "id": "hero_description", "label": "Hero Description", "type": "text" },
+        { "id": "stats_items", "label": "Statistics", "type": "paragraph(stat_item)[]" },
+        { "id": "featured_beverages_title", "label": "Featured Beverages Title", "type": "string" },
+        { "id": "cta_title", "label": "CTA Title", "type": "string" },
+        { "id": "cta_description", "label": "CTA Description", "type": "text" },
+        { "id": "cta_primary", "label": "Primary CTA", "type": "string" },
+        { "id": "cta_secondary", "label": "Secondary CTA", "type": "string" }
+      ]
+    },
+    {
+      "bundle": "beverage",
+      "label": "Beverage",
+      "description": "Beers, wines, and craft beverages on tap or available for purchase",
+      "body": true,
+      "fields": [
+        { "id": "beverage_type", "label": "Beverage Type", "type": "term(beverage_types)[]" },
+        { "id": "style", "label": "Style", "type": "string" },
+        { "id": "abv", "label": "ABV", "type": "string" },
+        { "id": "ibu", "label": "IBU", "type": "string" },
+        { "id": "tasting_notes", "label": "Tasting Notes", "type": "string[]" },
+        { "id": "availability", "label": "Availability", "type": "string" },
+        { "id": "price_pint", "label": "Price Per Pint", "type": "string" },
+        { "id": "image", "label": "Beverage Image", "type": "image" }
+      ]
+    },
+    {
+      "bundle": "event",
+      "label": "Event",
+      "description": "Brewery events, tastings, and live entertainment",
+      "body": true,
+      "fields": [
+        { "id": "event_date", "label": "Event Date", "type": "datetime" },
+        { "id": "end_date", "label": "End Date", "type": "datetime" },
+        { "id": "venue_location", "label": "Location", "type": "string" },
+        { "id": "event_category", "label": "Event Category", "type": "term(event_categories)[]" },
+        { "id": "ticket_price", "label": "Ticket Price", "type": "string" },
+        { "id": "image", "label": "Event Image", "type": "image" }
+      ]
+    },
+    {
+      "bundle": "page",
+      "label": "Basic Page",
+      "description": "Static content pages",
+      "body": true,
+      "fields": []
+    },
+    {
+      "entity": "paragraph",
+      "bundle": "stat_item",
+      "label": "Statistic Item",
+      "fields": [
+        { "id": "number", "label": "Number", "type": "string!" },
+        { "id": "label", "label": "Label", "type": "string!" }
+      ]
+    }
+  ],
+  "taxonomies": [
+    {
+      "vocabulary": "beverage_types",
+      "label": "Beverage Types",
+      "terms": ["IPA", "Stout", "Lager", "Wheat", "Sour", "Pilsner", "Porter", "Seasonal"]
+    },
+    {
+      "vocabulary": "event_categories",
+      "label": "Event Categories",
+      "terms": ["Tasting", "Live Music", "Food Pairing", "Tour", "Release Party", "Trivia Night"]
+    }
+  ],
+  "content": [
+    {
+      "id": "stat-brews",
+      "type": "paragraph.stat_item",
+      "values": { "number": "24", "label": "Beers on Tap" }
+    },
+    {
+      "id": "stat-barrels",
+      "type": "paragraph.stat_item",
+      "values": { "number": "5,000+", "label": "Barrels Brewed Annually" }
+    },
+    {
+      "id": "stat-years",
+      "type": "paragraph.stat_item",
+      "values": { "number": "12", "label": "Years of Craft Brewing" }
+    },
+    {
+      "id": "stat-awards",
+      "type": "paragraph.stat_item",
+      "values": { "number": "35+", "label": "Awards Won" }
+    },
+    {
+      "id": "homepage",
+      "type": "node.homepage",
+      "path": "/homepage",
+      "values": {
+        "title": "Welcome to Iron Rail Brewing Co.",
+        "hero_title": "Craft Beer, Brewed with Purpose",
+        "hero_subtitle": "Small Batch. Big Flavor. Local Heart.",
+        "hero_description": "<p>At Iron Rail Brewing Co., we believe great beer starts with quality ingredients, time-honored techniques, and a relentless passion for flavor. Visit our taproom, take a brewery tour, or grab a growler to go. There's always something new on tap.</p>",
+        "stats_items": ["@stat-brews", "@stat-barrels", "@stat-years", "@stat-awards"],
+        "featured_beverages_title": "What's on Tap",
+        "cta_title": "Visit the Taproom",
+        "cta_description": "<p>Our taproom is open seven days a week, featuring rotating taps, pub fare from our scratch kitchen, and a welcoming atmosphere for beer lovers of all kinds. Bring your friends, your family, and your dog.</p>",
+        "cta_primary": "View Hours & Location",
+        "cta_secondary": "Book a Tour"
+      }
+    },
+    {
+      "id": "beer-flagship-ipa",
+      "type": "node.beverage",
+      "path": "/beers/iron-rail-ipa",
+      "values": {
+        "title": "Iron Rail IPA",
+        "body": "<p>Our flagship IPA is a bold, hop-forward brew that put us on the map. Brewed with a blend of Citra, Mosaic, and Simcoe hops, it delivers waves of tropical fruit and pine with a clean, balanced finish. This is the beer that started it all — and it's still the one our regulars come back for.</p><h2>Brewing Notes</h2><p>We dry-hop this IPA for seven days using our proprietary blending technique, which produces an exceptionally aromatic beer with minimal bitterness on the palate.</p>",
+        "beverage_type": ["ipa"],
+        "style": "West Coast IPA",
+        "abv": "6.8%",
+        "ibu": "65",
+        "tasting_notes": ["Tropical fruit", "Pine", "Citrus zest", "Clean finish"],
+        "availability": "Year-round",
+        "price_pint": "$7",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=800&q=80",
+          "alt": "Glass of golden IPA beer with hops in background"
+        }
+      }
+    },
+    {
+      "id": "beer-midnight-stout",
+      "type": "node.beverage",
+      "path": "/beers/midnight-stout",
+      "values": {
+        "title": "Midnight Stout",
+        "body": "<p>Rich, velvety, and deeply satisfying, our Midnight Stout is brewed with roasted barley, chocolate malt, and a hint of vanilla. This full-bodied stout pours an opaque black with a creamy tan head and delivers complex layers of dark chocolate, espresso, and caramel.</p><h2>Brewing Notes</h2><p>We cold-condition this stout for three weeks, which smooths out the roasted edges and creates an exceptionally drinkable dark beer. Perfect for cooler evenings or paired with a rich dessert.</p>",
+        "beverage_type": ["stout"],
+        "style": "American Stout",
+        "abv": "7.2%",
+        "ibu": "40",
+        "tasting_notes": ["Dark chocolate", "Espresso", "Vanilla", "Caramel"],
+        "availability": "Year-round",
+        "price_pint": "$7",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1608270586620-248524c67de9?w=800&q=80",
+          "alt": "Dark stout beer in a tulip glass"
+        }
+      }
+    },
+    {
+      "id": "beer-golden-lager",
+      "type": "node.beverage",
+      "path": "/beers/golden-lager",
+      "values": {
+        "title": "Golden Rail Lager",
+        "body": "<p>Crisp, clean, and refreshing — our Golden Rail Lager is a classic American lager elevated with premium ingredients. Brewed with Pilsner malt and noble hops, then lagered for six weeks at near-freezing temperatures for a smooth, bright character that's perfect any time of day.</p><h2>Brewing Notes</h2><p>This lager undergoes a traditional decoction mash and extended cold conditioning, producing the kind of clean, malty character that made lager the world's most popular beer style.</p>",
+        "beverage_type": ["lager"],
+        "style": "American Lager",
+        "abv": "4.5%",
+        "ibu": "18",
+        "tasting_notes": ["Crisp malt", "Light floral hops", "Bread crust", "Clean finish"],
+        "availability": "Year-round",
+        "price_pint": "$6",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=800&q=80",
+          "alt": "Refreshing golden lager in a pilsner glass"
+        }
+      }
+    },
+    {
+      "id": "beer-hefeweizen",
+      "type": "node.beverage",
+      "path": "/beers/summer-haze",
+      "values": {
+        "title": "Summer Haze Hefeweizen",
+        "body": "<p>A traditional Bavarian-style wheat beer, our Summer Haze pours a hazy golden-orange with a thick, pillowy white head. Classic banana and clove character from our imported German yeast strain makes this the ultimate warm-weather sipper.</p><h2>Brewing Notes</h2><p>Brewed with 60% malted wheat and fermented at a carefully controlled temperature to bring out the signature fruity esters and spicy phenols of the Weihenstephan yeast strain.</p>",
+        "beverage_type": ["wheat"],
+        "style": "Hefeweizen",
+        "abv": "5.1%",
+        "ibu": "12",
+        "tasting_notes": ["Banana", "Clove", "Wheat bread", "Light citrus"],
+        "availability": "Seasonal (April - September)",
+        "price_pint": "$7",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1600788886242-5c96aabe3757?w=800&q=80",
+          "alt": "Hazy wheat beer in a traditional weizen glass"
+        }
+      }
+    },
+    {
+      "id": "event-ipa-day",
+      "type": "node.event",
+      "path": "/events/national-ipa-day",
+      "values": {
+        "title": "National IPA Day Celebration",
+        "body": "<p>Celebrate National IPA Day with us! We're tapping five exclusive IPA variants, including two that have never been available outside the brewery. Enjoy live music from local band The Hop Yard, food trucks, and a special IPA flight sampler.</p><h2>Featured Releases</h2><ul><li>Iron Rail IPA (flagship)</li><li>Double Dry-Hopped Iron Rail</li><li>Hazy Juicy IPA (new release)</li><li>Barrel-Aged Imperial IPA</li><li>Session IPA with Mango</li></ul>",
+        "event_date": "2026-08-06T12:00:00",
+        "end_date": "2026-08-06T22:00:00",
+        "venue_location": "Taproom & Beer Garden",
+        "event_category": ["release-party"],
+        "ticket_price": "Free admission, flights $15",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
+          "alt": "Craft beer tasting flight on wooden paddle"
+        }
+      }
+    },
+    {
+      "id": "event-trivia",
+      "type": "node.event",
+      "path": "/events/weekly-trivia",
+      "values": {
+        "title": "Taproom Trivia Night",
+        "body": "<p>Think you know your stuff? Put your team to the test every Wednesday at our weekly Trivia Night. Five rounds of questions spanning pop culture, sports, science, history, and of course, beer. Top three teams win gift cards to the taproom.</p><p>Teams of up to 6 players. Arrive early to snag the best seats. Happy hour prices on all drafts during trivia!</p>",
+        "event_date": "2026-04-08T19:00:00",
+        "end_date": "2026-04-08T21:30:00",
+        "venue_location": "Main Taproom",
+        "event_category": ["trivia-night"],
+        "ticket_price": "Free entry",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1546622891-02c72c1537b6?w=800&q=80",
+          "alt": "Friends enjoying trivia night at a brewery taproom"
+        }
+      }
+    },
+    {
+      "id": "event-beer-dinner",
+      "type": "node.event",
+      "path": "/events/brewmasters-dinner",
+      "values": {
+        "title": "Brewmaster's Dinner: Spring Edition",
+        "body": "<p>Our head brewer and executive chef collaborate on an intimate five-course dinner where each dish is designed to complement a specially selected beer. This seasonal dinner highlights spring ingredients from local farms paired with exclusive small-batch brews.</p><h2>Menu Preview</h2><ul><li>Course 1: Spring pea veloute with Session Lager</li><li>Course 2: Pan-seared trout with Summer Haze Hefeweizen</li><li>Course 3: Braised lamb shank with Midnight Stout</li><li>Course 4: Local cheese board with Belgian Dubbel</li><li>Course 5: Lavender cr&egrave;me br&ucirc;l&eacute;e with Honey Wheat</li></ul>",
+        "event_date": "2026-05-16T18:30:00",
+        "end_date": "2026-05-16T21:30:00",
+        "venue_location": "Private Dining Room",
+        "event_category": ["food-pairing"],
+        "ticket_price": "$85 per person",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80",
+          "alt": "Elegant beer and food pairing dinner setup"
+        }
+      }
+    },
+    {
+      "id": "page-about",
+      "type": "node.page",
+      "path": "/about",
+      "values": {
+        "title": "About Iron Rail Brewing Co.",
+        "body": "<p>Iron Rail Brewing Co. was founded in 2014 by two lifelong friends with a shared dream: to brew honest, flavorful beer for their community. What started as a 3-barrel garage operation has grown into a 30-barrel production brewery with a taproom, beer garden, and distribution across three states.</p><h2>Our Philosophy</h2><p>We believe great beer doesn't need gimmicks. We focus on classic styles brewed with the best ingredients we can source — locally grown grains, whole-flower hops, and our proprietary house yeast strains. Every batch is brewed with intention and care.</p><h2>Sustainability</h2><p>We're committed to brewing responsibly. Our spent grain goes to local farms for animal feed, we reclaim 90% of our brewing water, and our taproom runs on 100% renewable energy. In 2024, we became a Certified B Corporation.</p><h2>Visit Us</h2><p><strong>Taproom Hours:</strong><br/>Monday - Thursday: 3 PM - 10 PM<br/>Friday: 12 PM - 11 PM<br/>Saturday: 11 AM - 11 PM<br/>Sunday: 11 AM - 8 PM</p><p>Dog-friendly patio. All ages welcome until 8 PM.</p>"
+      }
+    },
+    {
+      "id": "page-tours",
+      "type": "node.page",
+      "path": "/tours",
+      "values": {
+        "title": "Brewery Tours",
+        "body": "<p>Go behind the scenes and see where the magic happens! Our guided brewery tours take you through our 30-barrel brewhouse, fermentation hall, barrel-aging cellar, and packaging line.</p><h2>Tour Details</h2><p><strong>Duration:</strong> 45 minutes plus tasting<br/><strong>Cost:</strong> $15 per person (includes 4 tasting pours)<br/><strong>Schedule:</strong> Saturdays at 1 PM, 3 PM, and 5 PM<br/><strong>Capacity:</strong> 20 guests per tour</p><h2>Private Tours</h2><p>Planning a team outing or special occasion? We offer private tours for groups of 10-30. Private tours include an extended tasting, a meet-and-greet with our brewers, and a complimentary pint glass. Contact us for pricing and availability.</p><h2>What to Know</h2><ul><li>Closed-toe shoes required in the brewhouse</li><li>Must be 21+ for the tasting portion</li><li>Reservations strongly recommended</li><li>Free parking available</li></ul>"
+      }
+    }
+  ]
+}
