@@ -3,188 +3,112 @@ import { Mail, Phone, MapPin, Clock } from 'lucide-react'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Contact Us',
-  description: 'Contact Iron Rail Brewing Company. We\'d love to hear from you about taproom hours, private events, or brewery tours.',
-  keywords: ['Contact Iron Rail Brewing Company', 'Support', 'Help', 'Get in Touch'],
+  title: 'Contact',
+  description: 'Contact Blackstone Brewing for taproom hours, private events, and brewery tours.',
 }
 
-export default function Contact() {
+export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-primary-950">
       <Header />
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-8 md:mb-12">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Contact Us</h1>
-            <p className="text-base md:text-lg text-gray-600">
-              Have questions about taproom hours, private events, or brewery tours? We&#39;d love to hear from you.
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-10">
+            <p className="text-accent-400 uppercase tracking-[0.18em] text-xs font-semibold mb-3">Contact</p>
+            <h1 className="text-4xl md:text-5xl font-display font-light text-white mb-4">Let&apos;s talk beer.</h1>
+            <p className="text-amber-200/70 text-lg">
+              Questions about hours, private events, or tours? Reach out and our taproom team will get back to you.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
-            {/* Contact Information */}
-            <div className="bg-white rounded-lg shadow-sm p-8">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-6">Get in Touch</h2>
-
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <Mail className="w-6 h-6 text-purple-600" />
-                  </div>
+          <div className="grid lg:grid-cols-5 gap-6">
+            <section className="lg:col-span-2 bg-primary-900 border border-primary-800 rounded-2xl p-6 md:p-8">
+              <h2 className="text-2xl font-semibold text-white mb-6">Taproom Info</h2>
+              <div className="space-y-6 text-amber-200/80">
+                <div className="flex items-start gap-3">
+                  <Mail className="w-5 h-5 text-accent-400 mt-0.5" />
                   <div>
-                    <h3 className="text-lg font-medium text-gray-900">Email</h3>
-                    <p className="text-gray-600">info@ironrailbrewing.com</p>
-                    <p className="text-gray-600">support@ironrailbrewing.com</p>
+                    <p className="text-white font-medium mb-1">Email</p>
+                    <p>hello@blackstonebrewing.com</p>
+                    <p>events@blackstonebrewing.com</p>
                   </div>
                 </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <Phone className="w-6 h-6 text-purple-600" />
-                  </div>
+                <div className="flex items-start gap-3">
+                  <Phone className="w-5 h-5 text-accent-400 mt-0.5" />
                   <div>
-                    <h3 className="text-lg font-medium text-gray-900">Phone</h3>
-                    <p className="text-gray-600">(555) 789-0123</p>
-                    <p className="text-sm text-gray-500">Monday to Friday, 9 AM - 6 PM EST</p>
+                    <p className="text-white font-medium mb-1">Phone</p>
+                    <p>(555) 789-0123</p>
                   </div>
                 </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-purple-600" />
-                  </div>
+                <div className="flex items-start gap-3">
+                  <MapPin className="w-5 h-5 text-accent-400 mt-0.5" />
                   <div>
-                    <h3 className="text-lg font-medium text-gray-900">Office</h3>
-                    <p className="text-gray-600">
-                      800 Barrel Lane<br />
-                      Warehouse District<br />
-                      Denver, CO 80202
-                    </p>
+                    <p className="text-white font-medium mb-1">Address</p>
+                    <p>800 Barrel Lane</p>
+                    <p>Denver, CO 80202</p>
                   </div>
                 </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <Clock className="w-6 h-6 text-purple-600" />
-                  </div>
+                <div className="flex items-start gap-3">
+                  <Clock className="w-5 h-5 text-accent-400 mt-0.5" />
                   <div>
-                    <h3 className="text-lg font-medium text-gray-900">Business Hours</h3>
-                    <p className="text-gray-600">
-                      Wednesday - Thursday: 3:00 PM - 10:00 PM<br />
-                      Friday - Saturday: 12:00 PM - 11:00 PM<br />
-                      Sunday: 12:00 PM - 8:00 PM
-                    </p>
+                    <p className="text-white font-medium mb-1">Taproom Hours</p>
+                    <p>Mon-Thu: 3 PM - 10 PM</p>
+                    <p>Fri: 12 PM - 11 PM</p>
+                    <p>Sat: 11 AM - 11 PM</p>
+                    <p>Sun: 11 AM - 8 PM</p>
                   </div>
                 </div>
               </div>
-            </div>
+            </section>
 
-            {/* Contact Form */}
-            <div className="bg-white rounded-lg shadow-sm p-8">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-6">Send us a Message</h2>
-
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
-                      First Name
-                    </label>
-                    <input
-                      type="text"
-                      id="firstName"
-                      name="firstName"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-blue-500"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
-                      Last Name
-                    </label>
-                    <input
-                      type="text"
-                      id="lastName"
-                      name="lastName"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-blue-500"
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-blue-500"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                    Subject
-                  </label>
+            <section className="lg:col-span-3 bg-primary-900 border border-primary-800 rounded-2xl p-6 md:p-8">
+              <h2 className="text-2xl font-semibold text-white mb-6">Send a Message</h2>
+              <form className="space-y-5">
+                <div className="grid sm:grid-cols-2 gap-4">
                   <input
                     type="text"
-                    id="subject"
-                    name="subject"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-blue-500"
+                    name="firstName"
+                    placeholder="First name"
+                    className="w-full bg-primary-950 border border-primary-700 text-amber-100 placeholder:text-amber-200/40 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent-500/50"
+                    required
+                  />
+                  <input
+                    type="text"
+                    name="lastName"
+                    placeholder="Last name"
+                    className="w-full bg-primary-950 border border-primary-700 text-amber-100 placeholder:text-amber-200/40 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent-500/50"
                     required
                   />
                 </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={6}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-blue-500"
-                    placeholder="Tell us how we can help you..."
-                    required
-                  />
-                </div>
-
-                <div>
-                  <button
-                    type="submit"
-                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-4 rounded-md hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 transition-colors duration-200 font-medium"
-                  >
-                    Send Message
-                  </button>
-                </div>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email address"
+                  className="w-full bg-primary-950 border border-primary-700 text-amber-100 placeholder:text-amber-200/40 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent-500/50"
+                  required
+                />
+                <input
+                  type="text"
+                  name="subject"
+                  placeholder="Subject"
+                  className="w-full bg-primary-950 border border-primary-700 text-amber-100 placeholder:text-amber-200/40 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent-500/50"
+                  required
+                />
+                <textarea
+                  name="message"
+                  rows={6}
+                  placeholder="Tell us how we can help..."
+                  className="w-full bg-primary-950 border border-primary-700 text-amber-100 placeholder:text-amber-200/40 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent-500/50"
+                  required
+                />
+                <button
+                  type="submit"
+                  className="w-full sm:w-auto inline-flex items-center justify-center bg-accent-500 hover:bg-accent-400 text-primary-950 font-semibold px-6 py-3 rounded-lg transition-colors"
+                >
+                  Send Message
+                </button>
               </form>
-            </div>
-          </div>
-
-          {/* Additional Information */}
-          <div className="mt-8 md:mt-12 bg-blue-50 rounded-lg p-6 md:p-8">
-            <div className="text-center">
-              <h2 className="text-xl md:text-2xl font-semibold text-gray-900 mb-4">Need Immediate Help?</h2>
-              <p className="text-sm md:text-base text-gray-600 mb-6">
-                Check out our documentation and community resources for quick answers to common questions.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="#"
-                  className="inline-flex items-center justify-center px-6 py-3 border border-purple-600 text-purple-600 rounded-md hover:bg-gradient-to-r from-blue-600 to-purple-600 hover:text-white transition-colors duration-200 font-medium"
-                >
-                  View Documentation
-                </a>
-                <a
-                  href="#"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-md hover:from-blue-700 hover:to-purple-700 transition-colors duration-200 font-medium"
-                >
-                  Join Community
-                </a>
-              </div>
-            </div>
+            </section>
           </div>
         </div>
       </main>
