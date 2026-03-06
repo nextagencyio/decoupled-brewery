@@ -19,28 +19,28 @@
               "__typename": "ParagraphStatItem",
               "id": "stat-brews",
               "title": "",
-              "number": "24",
+              "number": "24", "value": "24",
               "label": "Beers on Tap"
             },
             {
               "__typename": "ParagraphStatItem",
               "id": "stat-barrels",
               "title": "",
-              "number": "5,000+",
+              "number": "5,000+", "value": "5,000+",
               "label": "Barrels Brewed Annually"
             },
             {
               "__typename": "ParagraphStatItem",
               "id": "stat-years",
               "title": "",
-              "number": "12",
+              "number": "12", "value": "12",
               "label": "Years of Craft Brewing"
             },
             {
               "__typename": "ParagraphStatItem",
               "id": "stat-awards",
               "title": "",
-              "number": "35+",
+              "number": "35+", "value": "35+",
               "label": "Awards Won"
             }
           ],
