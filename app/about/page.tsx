@@ -60,7 +60,7 @@ export default function AboutPage() {
 
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
           <div className="grid md:grid-cols-3 gap-5">
-            {principles.map((item) => {
+            {principles.map((item: any) => {
               const Icon = item.icon
               return (
                 <article key={item.title} className="bg-primary-900 border border-primary-800 rounded-xl p-6">
