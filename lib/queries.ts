@@ -17,7 +17,7 @@ export const GET_EVENTS = gql`
     nodeEvents(first: $first, sortKey: CREATED_AT) {
       nodes {
         id title path created { timestamp } changed { timestamp }
-        ... on NodeEvent { body { processed summary } eventDate location image { url alt width height } }
+        ... on NodeEvent { body { processed summary } eventDate { timestamp } location image { url alt width height } }
       }
     }
   }
@@ -42,7 +42,7 @@ export const GET_NODE_BY_PATH = gql`
         entity {
           ... on NodePage { id title body { processed } }
           ... on NodeBeverage { id title body { processed } style abv price seasonal image { url alt width height } }
-          ... on NodeEvent { id title body { processed } eventDate location image { url alt width height } }
+          ... on NodeEvent { id title body { processed } eventDate { timestamp } location image { url alt width height } }
           ... on NodeHomepage { id title heroTitle heroSubtitle heroDescription { processed } featuresItems { ... on ParagraphFeatureItem { id title description { processed } icon } } ctaTitle ctaDescription { processed } ctaPrimary ctaSecondary }
         }
       }

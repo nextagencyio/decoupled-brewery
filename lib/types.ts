@@ -35,7 +35,7 @@ export interface BeverageData { nodeBeverages: { nodes: DrupalBeverage[] } }
 
 export interface DrupalEvent extends DrupalNode {
   body?: { processed: string; summary?: string }
-  eventDate?: string
+  eventDate?: { timestamp: number }
   location?: string
   image?: { url: string; alt?: string; width?: number; height?: number; variations?: Array<{ name: string; url: string; width: number; height: number }> }
 }
