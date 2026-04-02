@@ -1,6 +1,5 @@
 import './globals.css'
 import { Oswald, Source_Sans_3 } from 'next/font/google'
-import ApolloProvider from './components/providers/ApolloProvider'
 // DEMO MODE: Remove this import and <DemoModeBanner /> below for production-only builds
 import { DemoModeBanner } from './components/DemoModeBanner'
 import { Viewport, type Metadata } from 'next'
@@ -77,9 +76,9 @@ export default function RootLayout({
     <html lang="en" className={`${oswald.variable} ${sourceSans.variable}`}>
       <body className="font-sans bg-primary-950 text-amber-100 antialiased">
         <DemoModeBanner />
-        <ApolloProvider>
+        
           {children}
-        </ApolloProvider>
+        
       </body>
     </html>
   )
